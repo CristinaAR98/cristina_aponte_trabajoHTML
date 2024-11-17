@@ -1,0 +1,394 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 20px; /* Añadido margen general para todo el cuerpo */
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Asegurando que no haya márgenes por defecto */
+}
+
+/* Estilos de la cabecera */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem 2rem; /* Aumentado el padding y añadido márgenes para mayor separación */
+    margin-bottom: 20px; /* Añadido margen inferior */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añadido para mejorar la visibilidad */
+}
+
+header .logo img {
+    width: 150px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* Aumentado el espacio entre enlaces */
+}
+
+nav a {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Añadido transform para un efecto completo */
+}
+
+nav a:hover {
+    background-color: #45a049;
+    transform: scale(1.05); /* Suaviza la interacción de hover */
+}
+
+nav a:focus {
+    outline: 2px solid #45a049; /* Añadido para accesibilidad con teclado */
+}
+
+/* Hero Section */
+.hero {
+    background: url('assets/img/hero-image.jpg') no-repeat center center/cover;
+    color: #cc1111;
+    padding: 6rem 2rem; /* Aumentado el padding para mejorar el espaciado */
+    text-align: center;
+    height: 500px; /* Mayor altura para una imagen de fondo más impactante */
+    margin-bottom: 30px; /* Añadido margen inferior */
+}
+
+.hero h1 {
+    font-size: 4rem; /* Mayor tamaño para mayor visibilidad */
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem; /* Aumentado el espaciado para un mejor balance */
+}
+
+.hero .btn-primary {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.75rem 2rem; /* Mayor tamaño de botón */
+    border-radius: 50px; /* Cambiado a un borde completamente redondeado */
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+}
+
+.hero .btn-primary:hover {
+    transform: scale(1.1);
+    background-color: #45a049;
+}
+
+.hero .btn-primary:focus {
+    outline: 2px solid #45a049; /* Añadido para accesibilidad con teclado */
+}
+
+/* Sección de Servicios */
+.services {
+    display: grid; /* Usamos Grid para crear una estructura flexible */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Creación de columnas automáticas que se ajustan al tamaño del contenedor */
+    gap: 2rem; /* Espacio entre las tarjetas de servicio */
+    padding: 3rem 2rem; /* Espaciado interno de la sección */
+    background-color:  #cc1111;/* Color de fondo suave para la sección */
+    margin-bottom: 30px; /* Espacio debajo de la sección */
+    color:   #fff;/* Color del texto principal */
+    transition: gap 0.3s ease; /* Transición suave para el espacio entre las tarjetas en caso de cambio de tamaño */
+}
+
+/* Estilo para cada elemento de servicio (tarjeta) */
+.service-item {
+    background-color: #fff; /* Fondo blanco para cada tarjeta */
+    padding: 2rem; /* Relleno interno para las tarjetas */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); /* Sombra sutil alrededor de las tarjetas */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease, background-color 0.3s ease; /* Transiciones para hover */
+    margin-bottom: 20px; /* Espacio entre las tarjetas */
+    display: flex; /* Usamos flexbox para centrar los elementos dentro de cada tarjeta */
+    flex-direction: column; /* Los elementos se organizan de arriba hacia abajo */
+    align-items: center; /* Centrar elementos horizontalmente */
+    justify-content: center; /* Centrar elementos verticalmente */
+    text-align: center; /* Alinear el texto al centro */
+}
+/* Estilo general para la galería */
+.galeria {
+    display: grid; /* Usamos grid para crear un diseño de galería flexible */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajusta el número de columnas según el tamaño de la pantalla */
+    gap: 20px; /* Espacio entre las tarjetas de productos */
+    padding: 20px;
+}
+
+/* Estilo para cada producto */
+.producto {
+    background-color: #fff; /* Fondo blanco para cada producto */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor de cada producto */
+    overflow: hidden; /* Esconde cualquier contenido que sobresalga */
+    text-align: center;
+    padding: 20px;
+}
+
+/* Ajustar el tamaño de las imágenes */
+.producto img {
+    width: 100%; /* Hace que las imágenes ocupen todo el ancho disponible */
+    height: auto; /* Mantiene la relación de aspecto de la imagen */
+    object-fit: cover; /* Hace que la imagen cubra todo el área del contenedor sin distorsionarse */
+    border-radius: 8px; /* Opcional: redondea las esquinas de la imagen */
+    transition: transform 0.3s ease; /* Transición suave al hacer hover */
+}
+
+/* Efecto al pasar el ratón sobre la imagen */
+.producto img:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño de la imagen para dar un efecto visual atractivo */
+}
+
+/* Descripción del producto */
+.producto p {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Efecto hover en el elemento de servicio */
+.service-item:hover {
+    transform: translateY(-12px); /* Eleva la tarjeta hacia arriba */
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2); /* Aumenta la sombra para dar efecto de profundidad */
+    opacity: 0.95; /* Reduce ligeramente la opacidad para un efecto sutil */
+    background-color: #f4f4f4; /* Cambia el fondo a un color más claro cuando se pasa el ratón */
+}
+
+/* Estilo para las imágenes dentro de las tarjetas */
+.service-item img {
+    width: 100px; /* Define un tamaño fijo para la imagen */
+    height: auto; /* Mantiene la relación de aspecto de la imagen */
+    margin-bottom: 1.5rem; /* Espacio debajo de la imagen */
+    transition: transform 0.3s ease; /* Transición suave para el efecto hover de la imagen */
+    max-width: 100%; /* La imagen se adapta al ancho del contenedor sin deformarse */
+}
+
+/* Efecto hover en las imágenes */
+.service-item:hover img {
+    transform: scale(1.1); /* Escala la imagen al pasar el ratón sobre ella */
+}
+
+/* Título del servicio */
+.service-item h3 {
+    font-size: 1.7rem; /* Tamaño de fuente del título */
+    margin: 1rem 0; /* Margen superior e inferior para separar del contenido */
+    color: #333; /* Color oscuro para el título */
+    font-weight: 600; /* Peso de la fuente para hacerlo más destacado */
+    letter-spacing: 0.5px; /* Espaciado entre las letras para un efecto más elegante */
+}
+
+/* Descripción del servicio */
+.service-item p {
+    font-size: 1.1rem; /* Tamaño de fuente para la descripción */
+    color: #666; /* Color gris para el texto de la descripción */
+    line-height: 1.6; /* Espaciado entre las líneas para mejorar la legibilidad */
+}
+
+/* Efecto de foco para accesibilidad, cuando el usuario navega con teclado */
+.service-item:focus {
+    outline: 2px solid #007bff; /* Resalta la tarjeta con un borde azul cuando tiene el foco */
+}
+
+/* Media Query para dispositivos con modo oscuro (si se usa) */
+@media (prefers-color-scheme: dark) {
+    .service-item {
+        background-color: #333; /* Fondo oscuro para el modo oscuro */
+        color: #fff; /* Texto blanco en modo oscuro */
+    }
+    .service-item:hover {
+        background-color: #444; /* Fondo ligeramente más claro al hacer hover */
+    }
+    .service-item:focus {
+        outline: 2px solid #66ccff; /* Resalta con un color más visible en el modo oscuro */
+    }
+}
+
+
+
+
+
+/* Para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .galeria {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+
+    .producto img {
+        height: auto; /* Ajuste del tamaño de la imagen */
+    }
+}
+
+
+/* Adaptaciones para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .services {
+        padding: 1.5rem; /* Menor padding en pantallas muy pequeñas */
+        gap: 1.5rem;
+    }
+
+    .service-item {
+        padding: 1rem;
+        margin-bottom: 12px;
+    }
+
+    .service-item img {
+        width: 60px; /* Imagen más pequeña */
+    }
+
+    .service-item h3 {
+        font-size: 1.4rem;
+    }
+}
+
+
+
+
+/* Testimonios */
+.testimonials {
+    background-color: #f4f4f4;
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-bottom: 30px; /* Añadido margen inferior */
+}
+
+.testimonials h2 {
+    font-size: 2.5rem; /* Aumento de tamaño de título */
+    margin-bottom: 2rem;
+}
+
+.testimonials blockquote {
+    font-style: italic;
+    color: #555;
+    margin: 2rem auto;
+    border-left: 4px solid #4CAF50;
+    padding-left: 1.5rem; /* Mayor espacio para mayor legibilidad */
+    max-width: 850px;
+    font-size: 1.2rem; /* Mejor legibilidad */
+}
+
+.testimonials blockquote p {
+    line-height: 1.8; /* Mejor espaciado entre líneas */
+}
+
+
+/* Botones */
+.btn-primary {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem 2rem; /* Botón más grande */
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+    margin: 20px 0; /* Añadido margen superior e inferior */
+}
+
+.btn-primary:hover {
+    transform: scale(1.1);
+    background-color: #45a049;
+}
+
+.btn-primary:focus {
+    outline: 2px solid #45a049; /* Añadido para accesibilidad con teclado */
+}
+
+.btn-suscripcion {
+    background-color: #008CBA;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.3s ease;
+    margin: 20px 0; /* Añadido margen superior e inferior */
+}
+
+.btn-suscripcion:hover {
+    background-color: #005f75;
+}
+
+.btn-suscripcion:focus {
+    outline: 2px solid #005f75; /* Añadido para accesibilidad con teclado */
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-top: 30px; /* Añadido margen superior */
+}
+
+footer a {
+    color: #f1f1f1;
+    margin: 0 15px; /* Aumento del espaciado entre enlaces */
+}
+
+footer a:hover {
+    color: #4CAF50;
+}
+
+footer a:focus {
+    outline: 2px solid #4CAF50; /* Añadido para accesibilidad con teclado */
+}
+
+footer .newsletter input,
+footer .newsletter button {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 30px;
+    border: none;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Añadido margen superior */
+}
+
+footer .newsletter input {
+    width: 80%;
+    max-width: 300px;
+    margin-right: 1rem;
+}
+
+footer .newsletter button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+footer .newsletter button:hover {
+    background-color: #45a049;
+}
+
+footer .newsletter button:focus {
+    outline: 2px solid #45a049; /* Añadido para accesibilidad con teclado */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem; /* Ajustar el tamaño del título en pantallas pequeñas */
+    }
+
+    .services {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+
+    .service-item {
+        padding: 1.5rem; /* Reducir el padding en pantallas pequeñas */
+    }
+}
