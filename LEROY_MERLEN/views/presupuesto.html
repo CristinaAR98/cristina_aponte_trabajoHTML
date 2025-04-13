@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Transforma tu hogar o negocio con los productos de construcción y decoración de LEROY_MERLEN. Asesoría experta, materiales de alta calidad y soluciones a medida para cada proyecto.">
+        <meta name="author" content="LEROY MERLEN">
+        <meta name="keywords" content="reformas hogar, diseño interior, materiales construcción, entrega rápida, asesoramiento personalizado, decoración moderna">
+        <meta name="robots" content="index, follow">
+        
+        
+        <!-- Open Graph meta tags -->
+        <meta property="og:title" content="LEROY MERLEN - Soluciones Integrales para tu Hogar y Construcción">
+        <meta property="og:description" content="Transforma tus espacios con LEROY MERLEN. Descubre nuestra gama de productos para construcción y decoración con asesoría experta.">
+        <meta property="og:image" content="https://www.leroymerlen.whf.bz/images/og-image.jpg">
+        <meta property="og:image:type" content="image/jpeg">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:url" content="https://www.leroymerlen.whf.bz/index.html">
+    
+        <!-- Twitter meta tags -->
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:site" content="@tu_usuario_de_twitter">
+      <meta name="twitter:title" content="LEROY MERLEN - Tu tienda de confianza para hogar y construcción">
+      <meta name="twitter:description" content="Encuentra productos y servicios para la construcción y decoración en LEROY MERLEN.">
+      <meta name="twitter:image" content="http://www.leroymerlen.whf.bz/images/og-image.jpg">
+    
+        <title>LEROY MERLEN - Soluciones Integrales para tu Espacio</title>
+
+          <!-- Estilos Generales -->
+           
+        
+            <link rel="stylesheet" href="../css/presupuesto.css">
+          
+       
+
+        <!-- Favicon principal -->
+        <link rel="icon" href="images/logo.ico" type="image/x-icon">
+
+        <!-- Iconos para dispositivos Apple -->
+        <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
+        <!-- Iconos para diferentes tamaños en navegadores -->
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+
+        <!-- Archivo de manifest para Android y Chrome -->
+        <link rel="manifest" href="images/site.webmanifest">
+
+    <script src="js/script.js" defer></script>
+
+
+</head>
+
+<body>
+    
+     <!-- Menú de navegación -->
+     <header>
+        <div class="header-container">
+            <!-- Logo Section -->
+            <div class="logo">
+                <a href="../views/presupuesto.html" aria-label="Volver a la página principal de LEROY MERLEN">
+                    <img alt="Logo" height="100" src="../images/logo.ico" width="100" alt="Logo de LEROY MERLEN, tienda especializada en construcción y decoración" loading="lazy" width="100" height="100"/>
+                </a>
+            </div>
+    
+            <!-- Main Navigation -->
+            <nav aria-label="Menú principal">
+               
+                    
+                <ul>
+                        
+                    <li><a href="../index.html" title="Volver al inicio" class="nav-link" aria-current="page">Inicio</a></li>
+                    
+                    <li><a href="productos.html" title="Ver galería de productos" class="nav-link">Galería</a></li>
+                    
+                    <li><a href="presupuesto.html" title="Solicitar presupuesto" class="nav-link">Presupuesto</a></li>
+                   
+                    <li><a href="contacto.html" title="Contáctanos" class="nav-link">Contacto</a></li>
+                </ul>
+                   
+                </nav>
+               
+            </div>
+            
+        </header>
+
+    <main>
+        <!-- Sección de Introducción -->
+        <section class="informacion">
+            <h2>Obtén un Presupuesto Adaptado a tu Proyecto</h2>
+            <p>En <strong>Mi Empresa</strong>, entendemos que cada proyecto es único. Ofrecemos productos y servicios personalizados para ayudarte a hacer realidad tus ideas. Completa el formulario para recibir un presupuesto detallado y a la medida de tus necesidades.</p>
+            <p><strong>¿Qué puedes solicitar?</strong></p>
+            <ul>
+                <li>Presupuesto para productos a medida y soluciones específicas</li>
+                <li>Servicios de asesoría y consultoría para proyectos complejos</li>
+                <li>Mantenimiento preventivo y soporte técnico especializado</li>
+                <li>Instalación y personalización de interiores y exteriores</li>
+            </ul>
+        </section>
+
+        <!-- Formulario de solicitud de presupuesto -->
+        <section>
+            <h1>Solicitar Presupuesto</h1>
+            <form action="enviar_presupuesto.php" method="POST">
+                <div class="form-group">
+                    <label for="nombre">Nombre <span class="required">*</span>:</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Escribe tu nombre completo">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email <span class="required">*</span>:</label>
+                    <input  id="email"  required placeholder="Introduce tu correo electrónico" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono <span class="required">*</span>:</label>
+                    <input type="tel" id="telefono" name="telefono" required placeholder="Introduce tu número de teléfono">
+                </div>
+
+                <div class="form-group">
+                    <label for="tipo_servicio">Tipo de Servicio <span class="required">*</span>:</label>
+                    <select id="tipo_servicio" name="tipo_servicio" required>
+                        <option value="">Selecciona un servicio</option>
+                        <option value="producto_a_medida">Producto a medida</option>
+                        <option value="asesoria">Asesoría</option>
+                        <option value="mantenimiento">Mantenimiento</option>
+                        <option value="consultoria">Consultoría</option>
+                        <option value="instalacion">Instalación</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Describe tu Proyecto <span class="required">*</span>:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Describe tu solicitud o consulta"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="fecha_entrega">Fecha Estimada de Inicio del Proyecto <span class="required">*</span>:</label>
+                    <input type="date" id="fecha_entrega" name="fecha_entrega" required>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" name="politica" required> Acepto la <a href="politica_privacidad.html" target="_blank">Política de privacidad</a>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn">Enviar Solicitud</button>
+            </form>
+        </section>
+
+       
+
+        <!-- Sección de Ubicación (Google Maps) -->
+        <section class="ubicacion">
+            <h2>Visítanos</h2>
+            <p>Estamos ubicados en el centro de la ciudad. Aquí te mostramos nuestra ubicación en Google Maps:</p>
+            <iframe src="https://www.google.com/maps/embed?pb=..." loading="lazy" allowfullscreen></iframe>
+        </section>
+    </main>
+
+  <!-- Pie de página -->
+<footer>
+
+    <div class="social">
+        <p>Conéctate con nosotros:</p>
+        <ul>
+        <li><a aria-label="Facebook de LEROY MERLIN" class="facebook" href="https://facebook.com" rel="noopener noreferrer" target="_blank">
+        <img alt="Facebook" height="32" src="../images/facebook.svg" width="32"/>
+        </a></li>
+        <li><a aria-label="Twitter de LEROY MERLIN" class="twitter" href="https://twitter.com" rel="noopener noreferrer" target="_blank">
+        <img alt="Twitter" height="32" src="../images/twitter.svg" width="32"/>
+        </a></li>
+        <li><a aria-label="Instagram de LEROY MERLIN" class="instagram" href="https://instagram.com" rel="noopener noreferrer" target="_blank">
+        <img alt="Instagram" height="32" src="../images/instagram.svg" width="32"/>
+        </a></li>
+        <li><a aria-label="LinkedIn de LEROY MERLIN" class="linkedin" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+        <img alt="LinkedIn" height="32" src="../images/linkedin.svg" width="32"/>
+        </a></li>
+        <li><a aria-label="YouTube de LEROY MERLIN" class="youtube" href="https://youtube.com" rel="noopener noreferrer" target="_blank">
+        <img alt="YouTube" height="32" src="../images/youtube.svg" width="32"/>
+        </a></li>
+        </ul>
+        </div>
+
+        <div class="info">
+            <ul>
+            <li>
+            <a aria-label="Leer nuestra política de privacidad" href="politica-privacidad.html">
+            <img alt="Privacidad" height="24" src="../images/privacy.svg" width="24"/> Política de Privacidad
+                            </a>
+            </li>
+            <li>
+            <a aria-label="Leer nuestros términos y condiciones" href="terminos-condiciones.html">
+            <img alt="Términos y condiciones" height="24" src="../images/terms.svg" width="24"/> Términos y Condiciones
+                            </a>
+            </li>
+            <li>
+            <a aria-label="Preguntas frecuentes" href="faq.html">
+            <img alt="Preguntas Frecuentes" height="24" src="../images/faq.svg" width="24"/> Preguntas Frecuentes
+                            </a>
+            </li>
+            </ul>
+            </div>
+            <div class="newsletter">
+            <form action="/suscribirse" method="POST">
+            <label for="email">
+            <img alt="Correo" height="24" src="../images/email.svg" width="24"/> Correo electrónico
+                        </label>
+            <div class="input-container">
+            <input aria-required="true" id="email" name="email" placeholder="Introduce tu correo" required="" type="email"/>
+            <button type="submit">Suscribirse</button>
+            </div>
+            </form>
+            </div>
+            <div class="contact">
+            <p>© <span id="current-year"></span> LEROY MERLEN. Todos los derechos reservados.</p>
+            <address>
+            <p>
+            <img alt="Ubicación" height="24" src="../images/location.svg" width="24"/>  
+                            Dirección: Centro Comercial Marineda City, Av. de Arteixo, S/N, 15008 A Coruña, España
+                        </p>
+            <p>
+            <img alt="Teléfono" height="24" src="../images/phone.svg" width="24"/>  
+                            Teléfono: <a href="tel:+34881900900">(+34) 881 90 09 00</a>
+            </p>
+            </address>
+            </div>
+    
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+    
+</footer>
+
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+
+<script>
+    const links = document.querySelectorAll(".nav-link");
+    const currentPath = window.location.pathname;
+  
+    links.forEach(link => {
+      const linkPath = new URL(link.href).pathname;
+  
+      if (linkPath === currentPath || currentPath.endsWith(link.getAttribute("href"))) {
+        link.classList.add("active");
+        link.setAttribute("aria-current", "page");
+      }
+    });
+  </script>
+
+
+</body>
+
+</html>
