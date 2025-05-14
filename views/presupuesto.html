@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Solicita un presupuesto personalizado para tu proyecto de construcción o reforma en LEROY_MERLEN." name="description"/>
+<meta content="LEROY MERLEN" name="author"/>
+<meta content="presupuesto reforma, presupuesto construcción, cotización materiales, LEROY MERLEN" name="keywords"/>
+<meta content="index, follow" name="robots"/>
+<meta content="Solicitar Presupuesto - LEROY MERLEN" property="og:title"/>
+<meta content="Obtén una cotización detallada para tus proyectos de construcción, reforma o decoración con LEROY MERLEN." property="og:description"/>
+<meta content="https://cristinaar98.github.io/cristina_aponte_trabajoHTML/images/og-image.jpg" property="og:image"/>
+<meta content="image/jpeg" property="og:image:type"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="https://cristinaar98.github.io/cristina_aponte_trabajoHTML/views/presupuesto.html" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@tu_usuario_de_twitter" name="twitter:site"/> <meta content="Solicitar Presupuesto - LEROY MERLEN" name="twitter:title"/>
+<meta content="Rellena el formulario y recibe un presupuesto a medida para tu proyecto." name="twitter:description"/>
+<meta content="https://cristinaar98.github.io/cristina_aponte_trabajoHTML/images/og-image.jpg" name="twitter:image"/>
+<title>Solicitar Presupuesto - LEROY MERLEN</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link href="../css/presupuesto.css" rel="stylesheet" type="text/css"/>
+<link href="../images/logo.ico" rel="icon" type="image/x-icon"/>
+<link href="../images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="../images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../images/site.webmanifest" rel="manifest"/> <script defer="" src="../js/script.js"></script> </head>
+<body>
+<header>
+<div class="header-container">
+<div class="logo">
+<a aria-label="Volver a la página principal de LEROY MERLEN" href="../views/presupuesto.html">
+<img alt="Logo de LEROY MERLEN, tienda especializada en construcción y decoración" height="256" loading="lazy" src="../images/logo.ico" width="256"/>
+</a>
+</div>
+<nav aria-label="Menú principal">
+ <ul>
+ <li><a aria-current="page" class="nav-link" href="../index.html" title="Volver al inicio">Inicio</a></li>
+ <li><a class="nav-link" href="productos.html" title="Ver galería de productos">Galería</a></li>
+ <li><a class="nav-link" href="presupuesto.html" title="Solicitar presupuesto">Presupuesto</a></li>
+ <li><a class="nav-link" href="contacto.html" title="Contáctanos">Contacto</a></li>
+ </ul>
+            
+</div>
+</header>
+<main>
+<section class="informacion">
+<h2>Obtén un Presupuesto Adaptado a tu Proyecto</h2>
+<p>En <strong>LEROY MERLEN</strong>, entendemos que cada proyecto es único. Ofrecemos productos y servicios personalizados para ayudarte a hacer realidad tus ideas. Completa el formulario para recibir un presupuesto detallado y a la medida de tus necesidades.</p>
+<p><strong>¿Qué puedes solicitar?</strong></p>
+<ul>
+<li>Presupuesto para productos a medida y soluciones específicas</li>
+<li>Servicios de asesoría y consultoría para proyectos complejos</li>
+<li>Mantenimiento preventivo y soporte técnico especializado</li>
+<li>Instalación y personalización de interiores y exteriores</li>
+</ul>
+</section>
+<section>
+<h1>Solicitar Presupuesto</h1>
+<form action="enviar_presupuesto.php" method="POST">
+<div class="form-group">
+<label for="nombre">Nombre <span class="required">*</span>:</label>
+<input id="nombre" name="nombre" pattern="[A-Za-zÀ-ÿ\s]+" placeholder="Escribe tu nombre completo" required="" title="Introduce solo letras y espacios." type="text"/>
+</div>
+<div class="form-group">
+<label for="email-presupuesto">Email <span class="required">*</span>:</label> <input id="email-presupuesto" name="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" placeholder="Introduce tu correo electrónico" required="" title="Introduce una dirección de correo válida (ej: usuario@dominio.com)" type="email"/>
+</div>
+<div class="form-group">
+<label for="telefono">Teléfono <span class="required">*</span>:</label>
+<input id="telefono" name="telefono" pattern="[0-9]{9}" placeholder="Introduce tu número de teléfono" required="" title="Introduce un número de teléfono válido de 9 dígitos." type="tel"/>
+</div>
+<div class="form-group">
+<label for="tipo_servicio">Tipo de Servicio <span class="required">*</span>:</label>
+<select id="tipo_servicio" name="tipo_servicio" required="">
+<option value="">Selecciona un servicio</option>
+<option value="producto_a_medida">Producto a medida</option>
+<option value="asesoria">Asesoría</option>
+<option value="mantenimiento">Mantenimiento</option>
+<option value="consultoria">Consultoría</option>
+<option value="instalacion">Instalación</option>
+</select>
+</div>
+<div class="form-group">
+<label for="mensaje">Describe tu Proyecto <span class="required">*</span>:</label>
+<textarea id="mensaje" name="mensaje" placeholder="Describe tu solicitud o consulta" required="" rows="4"></textarea>
+</div>
+<div class="form-group">
+<label for="fecha_entrega">Fecha Estimada de Inicio del Proyecto <span class="required">*</span>:</label>
+<input id="fecha_entrega" name="fecha_entrega" required="" type="date"/>
+</div>
+<div class="form-group">
+<label>
+<input name="politica" required="" type="checkbox"/> Acepto la <a href="politica_privacidad.html" target="_blank">Política de privacidad</a>
+</label>
+</div>
+<button class="btn" type="submit">Enviar Solicitud</button>
+</form>
+</section>
+<section class="ubicacion">
+<h2>Visítanos</h2>
+<p>Estamos ubicados en el centro de la ciudad. Aquí te mostramos nuestra ubicación en Google Maps:</p>
+<iframe allowfullscreen="" loading="lazy" src="https://www.google.com/maps/embed?pb=..." style="width: 100%; border:0; min-height: 400px;" title="Ubicación de LEROY MERLEN en Google Maps"></iframe>
+</section>
+</main>
+
+<footer>
+<div class="social">
+<p>Conéctate con nosotros:</p>
+<ul>
+  <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+  <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+  <li><a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+  <li><a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+  <li><a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></li>
+</ul>
+
+</div>
+<div class="info">
+<ul>
+<li><a href="politica-privacidad.html"><img alt="Privacidad" height="24" src="../images/privacy.svg" width="24"/> Política de Privacidad</a></li>
+<li><a href="terminos-condiciones.html"><img alt="Términos y condiciones" height="24" src="../images/terms.svg" width="24"/> Términos y Condiciones</a></li>
+<li><a href="faq.html"><img alt="Preguntas Frecuentes" height="24" src="../images/faq.svg" width="24"/> Preguntas Frecuentes</a></li>
+</ul>
+</div>
+<div class="newsletter">
+        <form action="/suscribirse" method="POST">
+            <label for="email">
+                <img src="../images/email.svg" alt="Correo" width="24" height="24"> Correo electrónico
+            </label>
+            <div class="input-container">
+                <input id="email" type="email" name="email" placeholder="Introduce tu correo" required aria-required="true">
+                <button type="submit">Suscribirse</button>
+            </div>
+        </form>
+    </div>
+</form>
+</div>
+
+
+<div class="contact">
+<p>© <span id="current-year"></span> LEROY MERLEN. Todos los derechos reservados.</p>
+<address>
+<p>
+<img alt="Ubicación" height="24" src="../images/location.svg" width="24"/>  
+                Dirección: Centro Comercial Marineda City, Av. de Arteixo, S/N, 15008 A Coruña, España
+            </p>
+<p>
+<img alt="Teléfono" height="24" src="../images/phone.svg" width="24"/>  
+                Teléfono: <a href="tel:+34881900900">(+34) 881 90 09 00</a>
+</p>
+</address>
+</div>
+<script>
+        const yearSpan = document.getElementById("current-year");
+        if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+    </script>
+</footer>
+
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+<script>
+    const links = document.querySelectorAll(".nav-link");
+    const currentPath = window.location.pathname;
+  
+    links.forEach(link => {
+      const linkPath = new URL(link.href).pathname;
+  
+      if (linkPath === currentPath || currentPath.endsWith(link.getAttribute("href"))) {
+        link.classList.add("active");
+        link.setAttribute("aria-current", "page");
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+/* Estilos específicos para la página de contacto */
+/* ASUME que style.css se carga ANTES para estilos base (body, header, footer) */
+
+body {
+    background-color: #f8f9fa; /* Fondo base */
+}
+
+main {
+    max-width: 1100px; /* Ancho máximo aumentado */
+    margin: 2rem auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr; /* Columna de formulario un poco más ancha */
+    gap: 2rem; /* Espacio entre columnas */
+}
+
+/* Media query para layout en pantallas medianas/pequeñas */
+@media (max-width: 992px) {
+    main {
+        grid-template-columns: 1fr; /* Una columna */
+        gap: 2.5rem; /* Aumentar espacio vertical */
+    }
+}
+
+/* Sección de Información de Contacto */
+.contact-info {
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.contact-info h1, .contact-form h2 {
+    color: #4CAF50; /* Verde */
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.8rem;
+}
+
+.contact-info h1 { border-bottom: 2px solid #eee; }
+.contact-form h2 { border-bottom: 2px solid #eee; }
+
+
+.contact-info p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    color: #333;
+    font-size: 1rem;
+}
+
+.contact-info address {
+    font-style: normal;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info address p {
+    margin-bottom: 0.7rem; /* Espacio entre líneas de dirección */
+    display: flex; /* Alinear icono y texto */
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-info address strong { /* Etiqueta (Dirección, Email, Teléfono) */
+    color: #555; /* Gris oscuro */
+    min-width: 70px; /* Ancho mínimo para alinear */
+    display: inline-block;
+}
+
+.contact-info address a {
+    color: #007bff; /* Azul Bootstrap */
+    text-decoration: none;
+    word-break: break-all; /* Evitar desbordamiento de emails largos */
+}
+
+.contact-info address a:hover, .contact-info address a:focus {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* Mapa */
+.contact-info iframe {
+    width: 100%;
+    height: 300px; /* Altura ajustada */
+    border: 1px solid #ddd; /* Borde */
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+
+/* Formulario de Contacto */
+.contact-form {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.6rem;
+    color: #495057;
+    font-size: 0.95rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical; /* Permitir redimensionar verticalmente */
+    min-height: 120px; /* Altura mínima */
+}
+
+.required {
+    color: #dc3545; /* Rojo Bootstrap */
+    margin-left: 3px;
+}
+
+
+
+.contact-form button[type="submit"] {
+    background-color: var(--color-acento-opuesto); /* APLICADO AQUÍ */
+    color: var(--color-blanco); /* Asegúrate de que el texto contraste bien */
+    /* ... (otros estilos existentes se mantienen) ... */
+}
+
+.contact-form button[type="submit"]:hover {
+    background-color: var(--color-acento-opuesto-hover); /* APLICADO AQUÍ */
+}
+
+.contact-form button[type="submit"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(255, 127, 80, 0.5); /* Sombra con el color coral (acento) */
+}
+
+/* Responsive específico de contacto */
+@media (max-width: 576px) {
+    main { padding: 0.5rem; gap: 1.5rem;}
+    .contact-info, .contact-form { padding: 1.5rem; }
+    .contact-info h1, .contact-form h2 { font-size: 1.6rem; }
+    .contact-info address p { flex-direction: column; align-items: flex-start; gap: 2px;}
+}

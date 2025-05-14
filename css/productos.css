@@ -1,0 +1,136 @@
+/* Estilos específicos para la página de productos */
+/* ASUME que style.css se carga ANTES para estilos base (body, header, footer) */
+
+body {
+    background-color: #f8f9fa; /* Fondo ligeramente distinto para diferenciar secciones */
+}
+
+main {
+    max-width: 1200px; /* Limitar ancho */
+    margin: 2rem auto; /* Centrar y margen vertical */
+    padding: 0 1rem; /* Padding lateral */
+}
+
+/* Sección Novedades (si aplica específicamente aquí) */
+.novedades {
+    text-align: center;
+    padding: 2rem;
+    background-color: #ffffff; /* Fondo blanco */
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.novedades h1, /* Título principal de la página */
+.novedades h2 { /* Título de sección (si se usa) */
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    color: #4CAF50; /* Verde */
+}
+
+.novedades p {
+    font-size: 1.1rem;
+    color: #555; /* Gris oscuro */
+    max-width: 800px;
+    margin: 0 auto 1rem auto; /* Centrar texto */
+}
+
+/* Estilo general para la galería de productos */
+.productos-grid {
+    display: grid;
+    /* Ajustar minmax para más control. 250px puede ser un buen mínimo */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px; /* Espacio entre tarjetas */
+    padding: 1rem 0; /* Padding vertical, sin padding horizontal extra si main lo tiene */
+}
+
+/* Estilo para cada tarjeta de producto */
+.producto {
+    background-color: #fff;
+    border-radius: 8px; /* Bordes suaves */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Sombra sutil */
+    overflow: hidden; /* Evitar que contenido sobresalga */
+    text-align: center;
+    padding: 1.5rem; /* Padding interno */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espacio entre elementos */
+}
+
+.producto:hover, .producto:focus-within {
+    transform: translateY(-6px); /* Levantar ligeramente */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); /* Sombra más pronunciada */
+}
+
+/* Ajustar el tamaño visual de las imágenes de producto */
+.producto img {
+    width: 100%; /* Ocupar ancho de tarjeta */
+    height: 220px; /* Altura fija para uniformidad, ajustar si es necesario */
+    object-fit: contain; /* 'contain' para ver la imagen completa, 'cover' si prefieres llenar */
+    margin-bottom: 1rem;
+    border-radius: 4px; /* Redondeo ligero si object-fit es contain */
+    /* width y height en HTML deben ser los originales (650x650) */
+    background-color: #f8f9fa; /* Fondo para 'contain' */
+}
+
+
+/* Descripción del producto */
+.producto p {
+    font-size: 1.05rem; /* Tamaño ajustado */
+    color:#333;
+    margin: 0.5rem 0 1rem 0;
+    font-weight: 600; /* Semi-negrita */
+    line-height: 1.4;
+    flex-grow: 1; /* Para que ocupe espacio si es necesario */
+}
+
+/* Botón 'Ver más' */
+
+.producto .ver-mas {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--color-acento-opuesto); /* Cambiado a color de acento */
+    color: var(--color-blanco); /* Asegurar que el color del texto sea blanco */
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-top: auto;
+    align-self: center;
+    border: 2px solid transparent;
+}
+
+.producto .ver-mas:hover, .producto .ver-mas:focus {
+    background-color: var(--color-acento-opuesto-hover); /* Usar el tono hover */
+    transform: scale(1.05);
+    outline: none;
+    border: 2px solid var(--color-acento-opuesto-hover); /* O un borde más oscuro del acento */
+}
+
+
+/* Media Queries específicos para productos */
+@media (max-width: 768px) {
+    .productos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+    .producto img {
+        height: 180px; /* Reducir altura de imagen */
+    }
+    main { padding: 0 0.5rem; } /* Menos padding lateral */
+}
+
+@media (max-width: 480px) {
+    .productos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Dos columnas en móvil */
+        gap: 15px;
+    }
+     .producto { padding: 1rem; }
+     .producto img { height: 140px; }
+     .producto p { font-size: 0.95rem; }
+     .producto .ver-mas { font-size: 0.85rem; padding: 0.5rem 1rem;}
+     .novedades h1, .novedades h2 { font-size: 1.8rem; }
+     .novedades p { font-size: 1rem; }
+}

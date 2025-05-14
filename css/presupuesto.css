@@ -1,0 +1,207 @@
+/* Estilos específicos para la página de presupuesto */
+/* ASUME que style.css se carga ANTES para estilos base (body, header, footer) */
+
+body {
+    background-color: #e9ecef; /* Fondo gris muy claro */
+}
+
+main {
+    max-width: 850px; /* Ancho máximo ajustado */
+    margin: 2rem auto;
+    padding: 1rem; /* Padding uniforme */
+}
+
+/* Sección de Introducción */
+.informacion {
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    border-left: 5px solid #4CAF50; /* Borde lateral verde */
+    box-shadow: 0 2px 8px #FF7F50;
+}
+
+.informacion h2 {
+    color: #4CAF50; /* Verde */
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.informacion p, .informacion ul {
+    color: #333;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+.informacion ul {
+    list-style: disc;
+    margin-left: 25px; /* Sangría para la lista */
+    margin-top: 0.8rem;
+}
+.informacion strong {
+    color: #333;
+}
+
+/* Formulario de solicitud */
+form {
+    background-color: #fff;
+    padding: 2rem 2.5rem; /* Padding generoso */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    margin-bottom: 2rem; /* Espacio antes de la sección de ubicación */
+}
+
+form h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #4CAF50; /* Verde */
+    font-size: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem; /* Espacio entre grupos */
+}
+
+label {
+    display: block;
+  
+    margin-bottom: 0.6rem; /* Espacio entre label e input */
+    color: #495057; /* Gris oscuro */
+    font-size: 0.95rem;
+}
+
+/* Estilos para los inputs, select, textarea */
+input[type="text"],
+input[type="email"],
+
+
+
+
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.8rem 1rem; /* Padding ajustado */
+    border: 1px solid #ced4da; /* Borde gris claro */
+    border-radius: 4px; /* Bordes suaves */
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    background-color: #fff; /* Asegurar fondo blanco */
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #80bdff; /* Azul claro en foco (estilo Bootstrap) */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Sombra azul en foco */
+    outline: none;
+}
+
+/* Placeholder */
+::placeholder {
+  color: #6c757d;
+  opacity: 1; /* Firefox */
+}
+
+/* Para indicar campos requeridos */
+.required {
+    color: #dc3545; /* Rojo Bootstrap */
+    margin-left: 3px;
+}
+
+/* Checkbox de política de privacidad */
+.form-group label input[type="checkbox"] {
+    margin-right: 8px;
+    vertical-align: middle;
+    width: auto; /* Evitar que ocupe 100% */
+}
+.form-group label a {
+    color: #007bff; /* Azul Bootstrap */
+    text-decoration: none;
+}
+.form-group label a:hover {
+    text-decoration: underline;
+}
+
+/* Botón de envío */
+/* presupuesto.css */
+button.btn[type="submit"] {
+    background-color: var(--color-acento-opuesto); /* Cambiado a color de acento */
+    color: var(--color-blanco); /* Asegurar texto blanco */
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+
+   
+
+button.btn[type="submit"]:active {
+     transform: scale(0.98);
+}
+button.btn[type="submit"]:focus {
+    outline: none;
+     box-shadow: 0 0 0 0.2rem rgba(255, 127, 80, 0.5); /* Sombra del color coral con alfa */
+}
+
+/* Sección de Ubicación */
+.ubicacion {
+    text-align: center;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.ubicacion h2 {
+    margin-bottom: 1rem;
+    color: #4CAF50; /* Verde */
+    font-size: 1.8rem;
+}
+
+.ubicacion p {
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.ubicacion iframe {
+    max-width: 100%;
+    border-radius: 4px;
+    border: 1px solid #ddd; /* Borde sutil para el mapa */
+    min-height: 350px; /* Altura mínima */
+}
+
+/* Media Queries específicos para productos */
+@media (max-width: 768px) {
+    .productos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+    .producto img {
+        height: 180px; /* Reducir altura de imagen */
+    }
+    main { padding: 0 0.5rem; } /* Menos padding lateral */
+}
+
+@media (max-width: 480px) {
+    .productos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Dos columnas en móvil */
+        gap: 15px;
+    }
+     .producto { padding: 1rem; }
+     .producto img { height: 140px; }
+     .producto p { font-size: 0.95rem; }
+     .producto .ver-mas { font-size: 0.85rem; padding: 0.5rem 1rem;}
+     .novedades h1, .novedades h2 { font-size: 1.8rem; }
+     .novedades p { font-size: 1rem; }
+}
